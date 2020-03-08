@@ -37,7 +37,7 @@
                 BUBBLE
         );
     }
-`public static final Item BUBBLE = new ItemBubble();`:定义一个物品。其它物品也可以类似于这样
+`public static final Item BUBBLE = new ItemBubble();`：定义一个物品。其它物品也可以类似于这样
 `event.getRegistry().registerAll();`：注册所有在括号里的物品  
 
 最后我们只需要在`CommonProxy`类中的的`preInit`方法中`new ItemsRegister()`即可。
