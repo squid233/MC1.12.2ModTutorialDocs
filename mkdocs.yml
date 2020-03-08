@@ -1,0 +1,6 @@
+site_name: Minecraft 1.12.2 Forge Mod开发教程
+nav:
+    - 主页: 'index.md'
+    - 构建开发环境: 'build.md'
+    - 主类、Mod信息与代理: 'MainClassAndModInfoAndProxy.md'
+    - 物品: 'item.md'
