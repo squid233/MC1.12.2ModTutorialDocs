@@ -43,4 +43,9 @@ IDEA安装好后，该下载Forge MDK包了。点击左侧的1.12.2，点击下�
 `Minecraft Server`同理
 ![image.png](https://i.loli.net/2020/03/07/oqO57fkBSIPwRDd.png)  
 （注意：在指定工作路径时，要新建文件夹（如果是跟着图片的话））  
+
+接下来到最后一步了，点击右边的`Gradle`，然后刷新你的项目，这样才能保证项目能正常工作。  
+按下Ctrl+Alt+Shift+S，将`Project Compiler Output`设定为`~\out`，其中`~`是你的Mod目录。
+
+---
 到此为止，工作环境已经配置好了，下一期我们将配置主类和Mod信息

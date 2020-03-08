@@ -3,7 +3,7 @@
 你的Mod开发环境已经构建完成，接下来我们编辑mcmod.info。此时你看到的内容应该是这样的：  
 ![image.png](https://i.loli.net/2020/03/08/8Oue15tHFPU4mbL.png)（不知道为啥，用代码块不能换行，所以只能用图片了）  
 
-第3行"modid"是这篇介绍所链接的modid。如果这个Mod没有加载，那么这篇介绍将会被忽略（必填）  
+第3行"modid"是这篇介绍所链接的modid。如果这个Mod没有加载，那么这篇介绍将会被忽略（必填）（注意：在之后我们将统一用`ExampleMod`来作为modid）  
 
 第4行"name"是Mod显示的名字（必填）  
 
@@ -69,8 +69,8 @@
 你以为做完了吗？No, 我们还有一些事情要做。  
 在`private static ExampleMod instance;`的下面，  
 `private static Logger logger;`的上面打上`@SidedProxy`注解，并分别指定  
-`clientSide`为`com.example.examplemod.ClientProxy`，  
-`serverSide`为`com.example.examplemod.CommonProxy`。  
+`clientSide`为`com.example.examplemod.proxy.ClientProxy`，  
+`serverSide`为`com.example.examplemod.proxy.CommonProxy`。  
 你还需要在主类的`preInit`和`init`方法中分别写上`proxy.preInit(event);`和`proxy.init(event);`。  
 现在最基本的已经完成了，不过你还可以添加一些东西，比如在`preInit`方法中写上`logger.info("preInit");`，这样在Mod预加载阶段时，你可以在控制台里看到"preInit"。  
 每一次做完了一些东西，当你认为可以了之后，可以运行`Minecraft Client`以查看效果。
@@ -99,8 +99,8 @@
     private static ExampleMod instance;
 
     @SidedProxy
-            (clientSide = "com.example.examplemod.ClientProxy",
-             serverSide = "com.example.examplemod.CommonProxy"
+            (clientSide = "com.example.examplemod.proxy.ClientProxy",
+             serverSide = "com.example.examplemod.proxy.CommonProxy"
             )
     private static CommonProxy proxy;
     private static Logger logger;
@@ -147,4 +147,4 @@
     }
 
 ---
-下期预告：添加物品并为其进行配置一些功能
+下一期我们将添加物品并为其进行添加一些功能
